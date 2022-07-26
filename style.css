@@ -1,0 +1,138 @@
+:root {
+    --vermelho: #E50914;
+    --preto: #141414;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--preto);
+    font-family: 'Times New Roman', Times, serif;
+   
+    color: white;
+}
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+header .logo {
+    color: var(--vermelho);
+    font-family: Arial;
+   
+    font-size: 40px;
+    margin-left: 10px ;
+   
+    padding: 7px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #aaa;
+    
+    margin-right: 20px;
+}
+
+header nav a:hover{
+    color: #fff;
+}
+
+/* FILME PRINCIPAL */
+
+.filme_principal {
+    font-size: 14px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url(img/Imagem\ de\ fundo.png);
+    
+    height: 400px;
+    background-size: cover;
+    
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.filme_principal .container {
+    margin-left: 6%;
+}
+
+.filme_principal .descricao {
+    margin-bottom: 10px;
+    font-size: 18px;
+    
+    font-style: italic;
+    color: rgba(250, 250, 250, 0.875);
+
+}
+
+.filme_principal .titulo {
+    margin-top: -3%;
+    font-size: 45px;
+    font-family: monospace;
+
+    color: white;
+}
+
+.filme_principal .botao {
+    background-color: rgba(0, 0, 0, .50);
+    border: none;
+    color: white;
+
+    padding: 15px 30px;
+    margin-right: 12px;
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.filme_principal .botao:hover {
+    background-color: white;
+    color: black;
+}
+
+.filme_principal .botao i{
+    margin-right: 5px;
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.carrosel-filmes .item{
+    margin-top: 5px;
+}
+
+ /* DEIXANDO O SITE RESPONSIVO */
+
+ @media screen and (max-width:700px){
+    header .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .botao{
+        margin-top: 5px;
+        width: 300px;
+    }
+
+    .filme_principal .container {
+        margin-left: 7px;
+    }
+ }
+
+ @media screen and (min-width:1000px){
+    .descricao {
+        width: 50%;
+    }    
+ }
